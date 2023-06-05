@@ -1,0 +1,28 @@
+GPU: [0,1]
+
+VERBOSE: True
+
+MODEL:
+  MODE: 'blind'
+  SESSION: 'denoising'
+
+# Optimization arguments.
+OPTIM:
+  BATCH_SIZE: 256
+  NUM_EPOCHS: 100
+  LR_INITIAL: 2e-4
+  #NEPOCH_DECAY: [40]
+  #BETA1: 0.9
+
+TRAINING:
+  TRAIN_PS: 48
+  VAL_PS: 128
+  RESUME: False
+  WARMUP: True
+  NOISE_BLIND: True
+  NOISE_LEVEL: 50
+  TRAIN_DIR: 'patches/color/train_patch' # path to training data
+  VAL_DIR: 'patches/color/val_patch'     # path to validation data
+  SAVE_DIR: './Models/'          # path to save models and images
+  SAVE_IMAGES: False
+  #VAL_AFTER_EVERY: 1
